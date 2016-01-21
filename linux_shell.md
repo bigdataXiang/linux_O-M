@@ -146,6 +146,10 @@ chmod g-s /home/public 禁用一个目录的 SGID 位
 chmod o+t /home/public 设置一个文件的 STIKY 位 - 只允许合法所有人删除文件 
 chmod o-t /home/public 禁用一个目录的 STIKY 位 
 
+
+-R 参数，就可以将读写权限传递给子文件夹
+例如chmod -R  777  /home/mypackage
+那么mypackage 文件夹和它下面的所有子文件夹的属性都变成
 返回顶部索引 ^
 
 文件的特殊属性 - 使用 "+" 设置权限，使用 "-" 用于取消 
