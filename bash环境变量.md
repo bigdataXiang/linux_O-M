@@ -1,13 +1,21 @@
-2.变量简介
+## 2.变量简介
 　　Linux是一个多用户的操作系统。每个用户登录系统后，都会有一个专用的运行环境。通常每个用户默认的环境都是相同的，这个默认环境实际上就是一组环境变量的定义。用户可以对自己的运行环境进行定制，其方法就是修改相应的系统环境变量。
 　　
-3.定制环境变量
+## 3.定制环境变量
 
 　　环境变量是和Shell紧密相关的，用户登录系统后就启动了一个Shell。
 　　对于Linux来说一般是bash，但也可以重新设定或切换到其它的Shell（使用chsh命令）。
 　　根据发行版本的情况，bash有两个基本的系统级配置文件：
 1
 /etc/bashrc和/etc/profile。
+
+(2)在profile文件末尾加入：
+JAVA_HOME=/usr/share/jdk1.5.0_05
+PATH=$JAVA_HOME/bin:$PATH
+CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export JAVA_HOME
+export PATH
+export CLASSPATH
 
 这些配置文件包含两组不同的变量：
 
